@@ -15,4 +15,5 @@ app.controller('UsersController', ['$scope', '$http', function($scope, $http) {
       $scope.newUser = {};
     })
   }
+
 }])

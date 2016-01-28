@@ -23,11 +23,13 @@
    width: 100%;
    height: auto;
    text-align: center;
-   /*background-color: #616161;*/
    background-size: cover;
    height: 20%;
    margin-top: 1%;
    margin-bottom: 3%;
+ }
+ .hidden{
+   display: none;
  }
  h1#logo{
    font-weight: 600;
@@ -46,6 +48,11 @@
  }
  #user-creator{
    text-align: center;
+ }
+ a#hide-form{
+   margin-left: 190px;
+   text-decoration: none;
+   color: #222;
  }
  #user-form input, #user-form select,#user-form input#submit{
    font-family: 'Cinzel', serif;
@@ -91,6 +98,7 @@ pink rgba(255,20,147,0.3)*/
   width:100%;
   height:100%;
   /*background-color: rgba(0,0,255,0.3);*/
+  background-color: rgba(0, 0, 0,0.7);
   position: relative;
   overflow: hidden;
   border-radius: 13px;
@@ -123,10 +131,13 @@ pink rgba(255,20,147,0.3)*/
   margin: 0;
 }
 .power{
-  height: 27%;
+  height: 145px;
   margin-top: 2%;
+  position: relative;
 }
-.card-power{
-  text-align: center;
-  margin-top: 18%;
+h2.card-power{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
