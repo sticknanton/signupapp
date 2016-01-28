@@ -1,0 +1,17 @@
+<section ng-controller="UsersController">
+  <form ng-submit="createUser()">
+    <input type="text" ng-model="newUser.name" placeholder="Enter your name"><br>
+    <label for="">Provide a URL for a picture of you (imgur)</label><br>
+    <input type="text" ng-model="newUser.pic_url" placeholder="Your url"><br>
+    <label for="">What's your superpower?</label><br>
+    <input type="text" ng-model="newUser.power" placeholder="Your Power"><br>
+    <input type="submit">
+  </form>
+
+
+
+  <div class="users" ng-repeat="user in users">
+    <h2>{{user.name}} has the power of {{user.power}}</h2>
+    <img ng-src="{{user.pic_url}}" alt="" />
+  </div>
+</section>
