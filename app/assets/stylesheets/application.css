@@ -16,17 +16,69 @@
  body{
    padding: 0;
    margin: 0;
+   background-color: #757575;
+   font-family: 'Cinzel', serif;
  }
+ header{
+   width: 100%;
+   height: auto;
+   text-align: center;
+   /*background-color: #616161;*/
+   background-size: cover;
+   height: 20%;
+   margin-top: 1%;
+   margin-bottom: 3%;
+ }
+ h1#logo{
+   font-weight: 600;
+   font-size: 5em;
+   padding: 0;
+   margin: 0;
+   line-height: 1.1;
+   text-shadow: 11px 6px 11px rgba(0, 0, 0, 0.65);
+ }
+ #desc{
+   margin: 0;
+   padding: 0;
+   font-size: 1.2em;
+   font-weight: bolder;
+   text-shadow: 11px 6px 11px rgba(0, 0, 0, 0.65);
+ }
+ #user-creator{
+   text-align: center;
+ }
+ #user-form input, #user-form select,#user-form input#submit{
+   font-family: 'Cinzel', serif;
+   font-weight: bolder;
+   font-size: 1.2em;
+   text-align: center;
+   width: 235px;
+ }
+ #user-form input#submit{
+   background-color: #222;
+   color: white;
+   font-size: 1.8em;
+ }
+ input#card-search{
+   font-family: 'Cinzel', serif;
+   font-size: 1em;
+   width: 180px;
+   text-align: center;
+ }
+ .users{
+   width: 100%;
+ }
+
 .user{
   width: 352px;
   height: 552px;
   border: 12px solid black;
   border-radius: 25px;
   padding: 0;
-  background-image: url('http://pre12.deviantart.net/dc3e/th/pre/i/2010/243/7/1/grunge_texture_by_rocknroll93-d2xqm53.jpg');
+  background-image: url('https://pre12.deviantart.net/dc3e/th/pre/i/2010/243/7/1/grunge_texture_by_rocknroll93-d2xqm53.jpg');
   color: white;
-  margin: auto;
-  margin-top: 2%;
+  margin: 2%;
+  display: inline-block;
 }
 
 
@@ -51,27 +103,30 @@ pink rgba(255,20,147,0.3)*/
   text-align: center;
   width: 90%;
   border: 3px solid black;
+  height: 6%;
   border-radius: 5px;
-  margin-left: 5%;
+  margin: 5% 4.3% 2%;
 }
 .card-title, .card-power{
-  margin-top: 1%;
+  margin-top: -2px;
+  font-size: 2em;
   text-align: center;
 }
 .card-image, .power{
   width: 90%;
-  margin-left: 5%;
+  margin-left: 4.3%;
   border: 3px solid black;
   border-radius: 5px;
 }
 .card-image{
   height: 55%;
+  margin: 0;
 }
 .power{
-  height: 28%;
+  height: 27%;
   margin-top: 2%;
 }
 .card-power{
   text-align: center;
-  margin-top: 20%;;
+  margin-top: 18%;
 }

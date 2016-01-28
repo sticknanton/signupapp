@@ -1,5 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
 var app = angular.module('signUpApp', []);
 
 app.controller('UsersController', ['$scope', '$http', function($scope, $http) {
@@ -14,6 +12,7 @@ app.controller('UsersController', ['$scope', '$http', function($scope, $http) {
     console.log($scope.newUser.color_choice);
     $http.post('/api/users', {user: $scope.newUser}).then(function(response) {
       $scope.users.push(response.data)
+      $scope.newUser = {};
     })
   }
 }])

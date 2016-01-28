@@ -1,24 +1,26 @@
-<section ng-controller="UsersController">
-  <form ng-submit="createUser()">
-    <input type="text" ng-model="newUser.name" placeholder="Enter your name"><br>
-    <label for="">Provide a URL for a picture of you (imgur)</label><br>
-    <input type="text" ng-model="newUser.pic_url" placeholder="Your url"><br>
-    <label for="">What's your superpower?</label><br>
-    <input type="text" ng-model="newUser.power" placeholder="Your Power"><br>
-    <label for="">Choose a color for your card</label><br>
+<section ng-controller="UsersController" id="user-creator">
+
+
+
+  <form ng-submit="createUser()" id="user-form">
+    <input type="text" class="text" ng-model="newUser.name" placeholder="Enter your name"><br>
+    <input type="text" class="text" ng-model="newUser.pic_url" placeholder="Your Image URL"><br>
+    <input type="text" class="text" ng-model="newUser.power" placeholder="Your Secret Power"><br>
     <select name="singleSelect" id="singleSelect" ng-model="newUser.color_choice">
+      <option value="" selected="selected">Your Power Color</option>
       <option value="rgba(14, 207, 88, 0.4)">Green</option>
       <option value="rgba(255,20,147,0.3)">Pink</option>
       <option value="rgba(0,0,255,0.3)">Blue</option>
       <option value="">Grey</option>
-    </select>
-    <input type="submit">
+    </select><br>
+    <input id="submit" type="submit">
   </form>
+  <hr>
+  <h4>Scroll or Search <input id="card-search" ng-model="searchText" placeholder="Cards"></h4>
+  <hr>
 
-
-
-  <div class="users" ng-repeat="user in users">
-    <div class="user">
+  <div class="users">
+    <div class="user" ng-repeat="user in users | filter:searchText">
       <div class="overlay" style="background-color:{{user.color_choice}};">
       <div class="name">
         <h2 class="card-title">{{user.name}} </h2>
