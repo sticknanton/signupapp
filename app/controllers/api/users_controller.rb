@@ -12,7 +12,7 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :pic_url, :power)
+    params.require(:user).permit(:name, :pic_url, :power, :color_choice)
 
   end
 

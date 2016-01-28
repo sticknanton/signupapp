@@ -5,13 +5,30 @@
     <input type="text" ng-model="newUser.pic_url" placeholder="Your url"><br>
     <label for="">What's your superpower?</label><br>
     <input type="text" ng-model="newUser.power" placeholder="Your Power"><br>
+    <label for="">Choose a color for your card</label><br>
+    <select name="singleSelect" id="singleSelect" ng-model="newUser.color_choice">
+      <option value="rgba(14, 207, 88, 0.4)">Green</option>
+      <option value="rgba(255,20,147,0.3)">Pink</option>
+      <option value="rgba(0,0,255,0.3)">Blue</option>
+      <option value="">Grey</option>
+    </select>
     <input type="submit">
   </form>
 
 
 
   <div class="users" ng-repeat="user in users">
-    <h2>{{user.name}} has the power of {{user.power}}</h2>
-    <img ng-src="{{user.pic_url}}" alt="" />
+    <div class="user">
+      <div class="overlay" style="background-color:{{user.color_choice}};">
+      <div class="name">
+        <h2 class="card-title">{{user.name}} </h2>
+      </div>
+      <img class="card-image" ng-src="{{user.pic_url}}" alt="" />
+      <div class="power">
+        <h2 class="card-power">{{user.power}}</h2>
+      </div>
+    </div>
+    </div>
   </div>
+
 </section>
