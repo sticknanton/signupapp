@@ -1,7 +1,7 @@
 <section ng-controller="UsersController" id="user-creator">
 
 
-  <form ng-submit="createUser()" id="user-form" ng-class="{'hidden': hide==true}">
+  <form ng-submit="createUser()" id="user-form" >
     <input type="text" class="text" ng-model="newUser.name" placeholder="Enter your name"><br>
     <input type="text" class="text" ng-model="newUser.pic_url" placeholder="Your Image URL"><br>
     <input type="text" class="text" ng-model="newUser.power" placeholder="Your Secret Power"><br>
