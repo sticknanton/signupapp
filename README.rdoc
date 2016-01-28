@@ -1,1 +1,3 @@
-Sign up application that will make you into a sweet card with a power of your choice
+The goal of this application was to experiment working with Angular while utilizing a Rails API. This app allows you to input your name (or any name), a URL to a picture you'd like, a magical power and your power color.
+
+From there the data is stored onto an API and rendered to the page asynchronously. The page renders each card with the image you chose and the color you picked. There is also a search functionality to let you find your card from the list or browse others.
